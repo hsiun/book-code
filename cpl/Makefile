@@ -1,3 +1,5 @@
+code-1-7:code-1-7.c
+	gcc -o code-1-7 code-1-7.c
 code-1-6:code-1-6.c
 	gcc -o code-1-6 code-1-6.c
 code-1-5:code-1-5.c
