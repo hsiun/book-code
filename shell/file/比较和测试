@@ -1,0 +1,27 @@
+if条件
+if condition；
+then
+	commands；
+fi
+
+算术比较，在[或]与操作数之间有一个空格
+[$var -eq 0 ] or [ $var -eq 0]
+
+常用操作符
+-gt 大于
+-lt 小于
+-ge 大于或等于
+-le 小于或等于
+-eq 等于
+-ne 不等于
+
+文件系统相关测试
+[ -f $file_var ] 如果$file_var包含文件则返回真
+
+字符串比较
+[[ $str1 = $str2 ]]
+[[ $str1 == $str2 ]] 字符串1等于字符串2
+
+[[ -z $str1 ]] 包含空字符串返回真
+[[ -n $str1 ]] 非空返回真
+

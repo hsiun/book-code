@@ -1,0 +1,21 @@
+这里介绍bash脚本的三种调试方式
+（1）使用-x，选项启用调试功能
+     bash -x script.sh
+     会打印每一条命令以及当前状态。
+（2）使用set -x和set -x对脚本进行部分调试。
+     set -x
+     echo $i
+     set +x
+（3）使用自定义格式调试选项
+	
+	#!/bin/bash
+	function DEBUG()
+	{
+		["$_DEBUG" == "on" ] && $@ || :
+	}
+	for i in {1..100}
+	do
+		DEBUG echo $i
+	done
+
+	_DEBUG=on ./scritp.sh

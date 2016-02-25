@@ -1,0 +1,32 @@
+在bash环境中，可以利用let、(())和[]执行基本的算术运算操作。而在进行高级操作时expr和bc这两个工具也会很有有用。
+#!/bin/bash
+num1=4;
+num2=7;
+在脚本中定义两个变量，它们会被存储为字符串类型。
+
+let result=num1+num2
+echo $result
+使用let进行加法操作，输出结果。
+
+let num++；
+自增操作
+
+let num--;
+自减操作
+
+result=$[ num1 + num2 ]
+使用操作符[]实现算术操作
+
+result=$(( nol + 50 ))
+使用(())进行加法操作
+
+echo "4 * 0.56" | bc
+使用bc实现浮点运算
+
+no=100
+echo "obase=2;$no" | bc
+使用bc实现进制转换
+
+echo "sqrt(100)" | bc 
+使用bc计算平方根
+

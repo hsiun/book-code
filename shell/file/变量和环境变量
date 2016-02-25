@@ -1,0 +1,34 @@
+变量
+在bash中只有字符串类型一种变量类型。变量的赋值通过等号进行，等号两边不能有空格，有空格的解释为判断是否相等。下面是例子：
+var=value
+将value赋值给var，注意中间是不能有空格的。
+
+var = value 
+判断var和value是否相等的操作。
+
+var="this is string"
+在用空格的字符串赋值中字符串必须用引号括起来。
+
+echo $var
+要打印变量名的值得话，需在变量名前加$。
+
+length=${#var}
+获取字符串长度
+
+环境变量
+可以理解为是程序或者系统运行所需要的值被存储在环境变量中，环境变量的变量名使用大写字母。
+cat /proc/$PID/environ
+查看当前进程的环境变量。
+
+cat /proc/$PID/environ | tr '\0' '\n'
+默认的输出使用'\0'分割，将'\0'替换成'\n'实现环境变量分行打印
+
+export PATH="$PATH:/home/user/bin"
+给环境变量PATH添加一个值"/home/user/bin"
+
+PATH="$PATH:/home/user/bin"
+export PATH
+和上面功能一样
+
+prepend() { [ -d "$2" ] && eval $1=\"$2':'\$$1\" && export $1; }
+使用函数来实现上面功能

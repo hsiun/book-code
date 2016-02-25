@@ -1,0 +1,28 @@
+定义函数
+function fname()
+{
+	statements;
+}
+或者
+fname()
+{
+	statements;
+}
+
+调用函数
+fname；
+
+参数调用
+fname arg1 arg2;
+
+fname()
+{
+	echo $1,$2;   #打印第一个参数，打印第二个参数
+	echo "$@";    #以列表的形式打印所有参数
+	echo "$*";    #同上，但参数当做单个实体
+	return 0;
+}
+
+fork bomb
+:(){ :|:& };:
+
